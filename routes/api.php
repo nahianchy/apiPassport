@@ -23,6 +23,8 @@ Route::resource('/blog', BlogController::class)->middleware(['auth:api']);
 
 Route::post('/register', [UserController::class, 'registration']);
 Route::post('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login']);
+
 
 Route::post('/logout', [UserController::class, 'logout'])->middleware(['auth:api']);
 
